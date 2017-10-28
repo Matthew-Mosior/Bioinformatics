@@ -1,2 +1,2 @@
 # Bioinformatics
-C++, Java, and Haskell source code for solving Bioinformatics related problems.
+C++, Java, Python, and Haskell source code for solving Bioinformatics related problems.
