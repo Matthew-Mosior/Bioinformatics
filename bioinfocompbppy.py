@@ -22,7 +22,7 @@ def getuserinput():
     print ("This function will take user DNA sequence input and return it.")
     user_DNA_input = input('Please enter your DNA sequence: ')
     #Ensure user input is only a upper or lower case nucleotide.
-    if not re.match("^[atgcATGC]", user_DNA_input):
+    if re.search("[^atgcATGC]", user_DNA_input):
         print ("Sorry, that is not a valid DNA sequence.")
         sys.exit()
     #Print user DNA sequence string.
