@@ -16,20 +16,19 @@ import sys
 
 #Functions:
 
-def getuserinput():
+def getuserinput(userInput):
     #Function to gather user DNA sequence.
     print ("Welcome to the getuserinput function!")
     print ("This function will take user DNA sequence input and return it.")
-    user_DNA_input = input('Please enter your DNA sequence: ')
-    #Ensure user input is only a upper or lower case nucleotide.
-    if re.search("[^atgcATGC]", user_DNA_input):
+    #Ensure user input is only a upper or lower case nucleotides.
+    if re.search("[^atgcATGC]", userInput):
         print ("Sorry, that is not a valid DNA sequence.")
         sys.exit()
     #Print user DNA sequence string.
     print("Here is the DNA sequence you entered:")
-    print(user_DNA_input)
+    print(userInput)
     #Return user DNA sequence.
-    return user_DNA_input
+    return userInput
 
 def touppercase(userDNAinput):
     #Function to make any lowercase nucleotides uppercase.
@@ -57,13 +56,16 @@ def complement(userDNAinput):
     new_DNA_dictionary = {'A':'T', 'T':'A', 'G':'C', 'C':'G'}
     #Use dictionary to create complementary DNA sequence.
     print("Here is the complementary user DNA sequence:")
-    print (''.join([new_DNA_dictionary[usernucleotide] for usernucleotide in userDNAinput]))
+    output1 = (''.join([new_DNA_dictionary[usernucleotide] for usernucleotide in userDNAinput]))
+    print (output1)
+    return output1
     
-def main():
+    
+def main(userinput):
     print ("Welcome to Matt's DNA sequence reader.")
     
     #Gather user DNA sequence input.
-    UserDNAseq = getuserinput()
+    UserDNAseq = getuserinput(userinput)
     
     #Check uppercase or lower case nucleotides.
     upperDNAseq = touppercase(UserDNAseq)
@@ -72,7 +74,9 @@ def main():
     reverseDNAseq = reverse(upperDNAseq)
     
     #Compute complementary DNA sequence.
-    complement(reverseDNAseq)
+    finalseq = complement(reverseDNAseq)
+    
+    return finalseq
     
     print ("Thanks for using Matt's DNA sequence reader!")
     
