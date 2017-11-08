@@ -1,4 +1,4 @@
---Reverse complement DNA sequence Haskell script.
+ --Reverse complement DNA sequence Haskell script.
 
 module Main where
 
@@ -16,7 +16,7 @@ userInputreverse   [] = []
 userInputreverse (x:xs) = if x == 'a' || x == 't' || x == 'g' || x == 'c' || x == 'A' || x == 'T' || x == 'G' || x == 'C' then reverse(map toUpper(x:rest)) else rest
                    where rest = reverse (userInputreverse xs)
 
---Another way to write DNA sequence capitalized reversed string function (with addition of finding complement DNA):
+--Another way to convert a users DNA sequence to a capitalized reversed string (with addition of finding complement DNA):
 userInputcomplement :: String -> String
 userInputcomplement x = let 
                         repl 'A' = 'T' 
