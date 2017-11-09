@@ -54,7 +54,7 @@ def main():
                             outfile6.write("FASTA:\n" + firstlinestr + "Here is the reverse complement of your sequence:\n" + bioinfocompbpaided.main(linematch1) + "\nHere is the contents of your input file: \n" + linematch1)
                             outfile6.close()
             else:
-                linesafter2 = lines[1:]
+                linesafter2 = lines[0:]
                 linesafter2str = str(linesafter2)
                 linematch2 = re.sub('[^ATGCatgc]' , '' , linesafter2str)
                 if args.outputFile:
