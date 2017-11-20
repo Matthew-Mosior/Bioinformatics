@@ -5,7 +5,7 @@ module Main where
 
 --hammingdistance
 hammingdistance :: String -> String -> Int
-hammingdistance instr1 instr2 = length(filter(uncurry(==)) (zip instr1 instr2))
+hammingdistance instr1 instr2 = length(filter(uncurry(/=)) (zip instr1 instr2))
 
 main :: IO ()
 main = putStrLn ("This Haskell script will return the hamming distance of two given DNA strings.")  
