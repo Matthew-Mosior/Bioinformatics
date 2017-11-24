@@ -1,4 +1,4 @@
---Rosalind: Translating DNA into Protein.
+--Rosalind: Translating RNA into Protein.
 module Main where
 
 --imports:    
