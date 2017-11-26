@@ -23,5 +23,6 @@ allmotif substring basestring = filter(\i -> substring `isPrefixOf` drop i bases
 iplus1allmotif :: [Int] -> [Int]
 iplus1allmotif locations = map (+1) locations
 
+--IO function.
 main :: IO ()
 main = putStrLn ("This haskell script will return the locations of a DNA substring in a DNA basestring.")
