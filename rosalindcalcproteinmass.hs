@@ -7,7 +7,7 @@ import Data.Char
 --type definitions and corresponding function definitions.
 
 --totalproteinmass
-totalproteinmass :: String -> Float
+totalproteinmass :: String -> Double
 totalproteinmass [] = 0.0 
 totalproteinmass (x:rest)   | map toUpper (x:[]) == "A" = 71.03711 + totalproteinmass rest  
                             | map toUpper (x:[]) == "C" = 103.00919 + totalproteinmass rest
