@@ -5,7 +5,7 @@ module Main where
 import Data.List
 import Data.Maybe
 
---singlemotif
+--firstmotif
 firstmotif :: String -> String -> Int
 firstmotif substring basestring = findstr substring basestring 0
     where
