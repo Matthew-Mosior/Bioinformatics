@@ -5,6 +5,8 @@ module Main where
 import Data.List
 import Data.Maybe
 
+--type definitions and corresponding function definitions.
+
 --firstmotif
 firstmotif :: String -> String -> Int
 firstmotif substring basestring = findstr substring basestring 0
