@@ -29,7 +29,7 @@ totalproteinmass (x:rest)   | map toUpper (x:[]) == "A" = 71.03711 + totalprotei
                             | map toUpper (x:[]) == "V" = 99.06841 + totalproteinmass rest
                             | map toUpper (x:[]) == "W" = 186.07931 + totalproteinmass rest
                             | map toUpper (x:[]) == "Y" = 163.06333 + totalproteinmass rest 
-                            | otherwise = 0 + totalproteinmass rest
+                            | otherwise = 0.0 + totalproteinmass rest
 
 --IO function.                            
 main :: IO ()
